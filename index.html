@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="cabecalho">
+            <div>
+                <button onclick="fechar()" id="fecharFazenda" class="fecharFazenda"> Voltar</button>
+        
+            </div>
+            <div class="dinheiro">
+                <h1 id="dinheiro">10</h1>
+            </div>
+            
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <!-- Mercado -->
+            <div id="puupmercado" class="puupmercado">
+                <h1 class="tituloMercado">Mercado</h1>
+                <div class="loja">
+
+                    <div onclick="adicionaraoInventario('Alface','imagens/loja/alface.jpeg' , this)">
+                        <p>Alface</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/alface.jpeg" alt="alface">
+                    </div>
+                    <div onclick="adicionaraoInventario('Tomate','imagens/loja/tomate.jpeg' , this)">
+                        <p>Tomate</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/tomate.jpeg" alt="tomate">
+                    </div>
+                    <div onclick="adicionaraoInventario('Cebola','imagens/loja/cebola.jpeg' , this)">
+                        <p>Cebola</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/cebola.jpeg" alt="cebola">
+                    </div>
+                    <div onclick="adicionaraoInventario('Cenoura','imagens/loja/cenoura.jpeg' , this)">
+                        <p>Cenoura</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/cenoura.jpeg" alt="cenoura">
+                    </div>
+                    <div onclick="adicionaraoInventario('Morango','imagens/loja/morango.jpeg' , this)">
+                        <p>Morango</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/morango.jpeg" alt="morango">
+                    </div>
+                    <div onclick="adicionaraoInventario('Banana','imagens/loja/banana.jpeg', this)">
+                        <p>Banana</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/banana.jpeg" alt="banana">
+                    </div>
+                    <div onclick="adicionaraoInventario('Laranja','imagens/loja/laranja.jpeg' , this)">
+                        <p>Laranja</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/laranja.jpeg" alt="laranja">
+                    </div>
+                    <div onclick="adicionaraoInventario('Abacaxi','imagens/loja/abacaxi.jpeg' , this)">
+                        <p>Abacaxi</p>
+                        <p>5</p>
+                        <p>R$</p><img src="imagens/loja/abacaxi.jpeg" alt="Abacaxi">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Inventário -->
+            <div id="puupinventario" class="puupmercado hidden">
+                <div class="loja" id="inventarioContainer">
+                    <!-- Itens do inventário serão adicionados aqui -->
+                </div>
+            </div>
+        </div>
+        <div>
+            <div id="mapa" class="mapa">
+                <div onclick="fazenda()" id="fazenda" class="fazenda">
+                    <div id="campofazenda" class="campofazenda hidden">
+                        <div>
+                            <h1></h1>
+                            
+                        </div>
+                       
+                        <div onclick="trabalhofazenda" id="trabalhofazenda" class="trabalhofazenda">
+                            <img src="imagens/imagemFazenda/trabalhonafazenda.jpeg" alt="">
+                            
+                        </div>
+                        <div id="inventarioFazenda" class="inventarioFazenda">
+                            <div onclick="selecionarprodução(1)"><img src="imagens/loja/abacaxi.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(2)"><img src="imagens/loja/alface.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(3)"><img src="imagens/loja/banana.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(4)"><img src="imagens/loja/cebola.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(5)"><img src="imagens/loja/cenoura.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(6)"><img src="imagens/loja/laranja.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(7)"><img src="imagens/loja/morango.jpeg" alt=""></div>
+                            <div onclick="selecionarprodução(8)"><img src="imagens/loja/tomate.jpeg" alt=""></div>
+                            
+                            
+                        </div>
+                        
+
+                      
+                        
+                        
+                    </div>
+                    
+
+
+                    <img src="imagens/imagemFazenda/fazenda.jpeg" alt="Fazenda">
+                </div>
+                <div></div>
+                <div>a</div>
+                <div>a</div>
+                <div>a</div>
+                <div>a</div>
+            </div>
+
+        </div>
+        <div>
+           
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div>
+            <button onclick="mercado()" class="navegacao">Mercado</button>
+        </div>
+        <div>
+            <button onclick="inventario()" class="navegacao">Inventário</button>
+        </div>
+    </footer>
+
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
