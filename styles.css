@@ -43,6 +43,9 @@ footer {
     grid-row: 3/4;
     background-color: rgb(39, 39, 39);
     display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .navegacao {
@@ -112,9 +115,10 @@ a {
 .mapa {
     display: grid;
 
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(3, 150px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     background-color: antiquewhite;
+    
     gap: 2px;
 }
 
