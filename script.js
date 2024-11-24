@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-
     // Definindo o valor inicial do dinheiro
-    let dinheiro = parseInt(document.getElementById("dinheiro").innerText.trim());
-
-
-
-
+    let dinheiro = parseFloat(document.getElementById("dinheiro").innerText.trim());
 
     // Função para adicionar itens ao inventário
     function adicionaraoInventario(nome, imagem, element) {
@@ -46,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Atualiza o dinheiro disponível
             dinheiro -= preco;
-            document.getElementById("dinheiro").innerText = dinheiro;
+            document.getElementById("dinheiro").innerText = dinheiro.toFixed(2);
 
             console.log(nome + " foi adicionado ao inventário.");
         } else {
@@ -64,6 +59,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Função para trabalhar na fazenda e adicionar dinheiro
+    function trabalhofazenda() {
+        dinheiro = dinheiro + 0.1;; // Incrementa o dinheiro
+        document.getElementById("dinheiro").innerText = dinheiro.toFixed(2); // Atualiza o valor na tela
+        console.log("Dinheiro após trabalho na fazenda: " + dinheiro);
+    }
+
+    // Tornar a função `trabalhofazenda` acessível globalmente, se necessário
+    window.trabalhofazenda = trabalhofazenda;
+
     // Coloca o mercado como a seção inicial visível
     mercado();
 
@@ -71,9 +76,6 @@ document.addEventListener("DOMContentLoaded", function () {
     window.mercado = mercado;
     window.inventario = inventario;
 });
-
-
-
 
 // Função para alternar entre o Mercado
 function mercado() {
@@ -107,24 +109,21 @@ function inventario() {
     }
 }
 
+// Função para alternar entre a Fazenda
 function fazenda() {
-
     let fazenda = document.getElementById("campofazenda");
     let mercado = document.getElementById("puupmercado");
     let inventario = document.getElementById("puupinventario");
 
-    
-        // Se a fazenda estiver oculta, mostra a fazenda e esconde o mercado e inventário
+    // Se a fazenda estiver oculta, mostra a fazenda e esconde o mercado e inventário
     if (fazenda.classList.contains("hidden")) {
         mercado.classList.add("hidden");
         inventario.classList.add("hidden");
         fazenda.classList.remove("hidden");
-    } 
-
-    
-
-    
+    }
 }
+
+// Função para fechar todas as seções
 function fechar() {
     let inventario = document.getElementById("puupinventario");
     let mercado = document.getElementById("puupmercado");
@@ -133,13 +132,4 @@ function fechar() {
     fazenda.classList.add("hidden");
     mercado.classList.add("hidden");
     inventario.classList.add("hidden");
-    
 }
-
-function selecionarprodução(produto){
-    
-}
-
-
-
-

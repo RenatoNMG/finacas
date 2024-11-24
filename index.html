@@ -15,12 +15,12 @@
         <div class="cabecalho">
             <div>
                 <button onclick="fechar()" id="fecharFazenda" class="fecharFazenda"> Voltar</button>
-        
+
             </div>
             <div class="dinheiro">
                 <h1 id="dinheiro">10</h1>
             </div>
-            
+
         </div>
     </header>
 
@@ -85,38 +85,28 @@
         <div>
             <div id="mapa" class="mapa">
                 <div onclick="fazenda()" id="fazenda" class="fazenda">
-                    <div id="campofazenda" class="campofazenda hidden">
-                        <div>
-                            <h1></h1>
-                            
-                        </div>
-                       
-                        <div onclick="trabalhofazenda" id="trabalhofazenda" class="trabalhofazenda">
-                            <img src="imagens/imagemFazenda/trabalhonafazenda.jpeg" alt="">
-                            
-                        </div>
-                        <div id="inventarioFazenda" class="inventarioFazenda">
-                            <div onclick="selecionarprodução(1)"><img src="imagens/loja/abacaxi.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(2)"><img src="imagens/loja/alface.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(3)"><img src="imagens/loja/banana.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(4)"><img src="imagens/loja/cebola.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(5)"><img src="imagens/loja/cenoura.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(6)"><img src="imagens/loja/laranja.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(7)"><img src="imagens/loja/morango.jpeg" alt=""></div>
-                            <div onclick="selecionarprodução(8)"><img src="imagens/loja/tomate.jpeg" alt=""></div>
-                            
-                            
-                        </div>
-                        
-
-                      
-                        
-                        
-                    </div>
-                    
-
 
                     <img src="imagens/imagemFazenda/fazenda.jpeg" alt="Fazenda">
+                </div>
+                <div id="campofazenda" class="campofazenda hidden">
+
+                    <div  id="trabalhofazenda" class="trabalhofazenda">
+                        <img onclick="trabalhofazenda()" src="imagens/imagemFazenda/trabalhonafazenda.jpeg" alt="">
+                        
+
+                    </div>
+                    <!-- <div id="inventarioFazenda" class="inventarioFazenda">
+                        <div onclick="selecionarprodução(1)"><img src="imagens/loja/abacaxi.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(2)"><img src="imagens/loja/alface.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(3)"><img src="imagens/loja/banana.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(4)"><img src="imagens/loja/cebola.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(5)"><img src="imagens/loja/cenoura.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(6)"><img src="imagens/loja/laranja.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(7)"><img src="imagens/loja/morango.jpeg" alt=""></div>
+                        <div onclick="selecionarprodução(8)"><img src="imagens/loja/tomate.jpeg" alt=""></div>
+                        
+                        
+                    </div> -->
                 </div>
                 <div></div>
                 <div>a</div>
@@ -126,20 +116,20 @@
             </div>
 
         </div>
-        
 
 
-    <footer>
-        <div>
-            <button onclick="mercado()" class="navegacao">Mercado</button>
-        </div>
-        <div>
-            <button onclick="inventario()" class="navegacao">Inventário</button>
-        </div>
-    </footer>
 
-    <script src="script.js">
-    </script>
+        <footer>
+            <div>
+                <button onclick="mercado()" class="navegacao">Mercado</button>
+            </div>
+            <div>
+                <button onclick="inventario()" class="navegacao">Inventário</button>
+            </div>
+        </footer>
+
+        <script src="script.js">
+        </script>
 </body>
 
 </html>
